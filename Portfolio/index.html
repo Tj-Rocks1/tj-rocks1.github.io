@@ -1,0 +1,110 @@
+
+
+
+<html> 
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+    	<title> Tommy Korff </title> 
+    	<script>
+			function banner(){ 
+				var text = confirm("Are you sure you would like to leave this page?"); 
+				return text; 
+			}
+			function answer(){
+				var radio = document.getElementsByName("trivia"); 
+				var selection = false; 
+				var message = "";
+
+				for( var i = 0; i < radio.length; i++) { 
+					if(radio[i].value == "Yes" && radio[i].checked == true) { 
+						selection = true; 
+					} //end if statement 
+				} //end for loop
+				if(selection == true) {
+					message = message + "<b><p style='color:navy'>Way to go!</p></b>"; 
+				} else { 
+					message = message + "<b><p style='color:maroon'>Try again my friend.</p></b>"; 
+				}
+				document.getElementById("response").innerHTML = message;
+			} //end function answer
+		</script>
+
+	</head> 
+	<body id="amazing"> 
+		<center>
+			<a href="http://lego.com" onclick="return banner()">
+			<header class="blueboy">
+				<marquee> <span class=pupper>Hello</span>, Welcome to my Website!</marquee>
+			</header>
+			</a>
+			<nav>
+				<ul id="navmenu">
+					<li class="navitem"> <a href="index.html"> Home </a> </li>
+					<li class="navitem"> <a href="games.html"> Games </a> </li>
+                    <li class="navitem"> <a href="aboutme.html"> About Me </a> </li>
+				</ul>
+			</nav>
+		</center>
+		<center>
+
+   			<h1> Tommy Korff </h1>
+    		<p class="text1"> 
+				I like doing stuff on the computer, 
+				reading and watching movies!!
+
+   		</center> 
+		<hr>
+		<div id="rightside">
+			<img class="image" src="https://images.stockfreeimages.com/532/sfi226w/5322202.jpg"/>
+		</div> 
+		<div id="leftside">
+			<img class="image" src="https://images.stockfreeimages.com/2098/sfixl/20980521.jpg"/>
+		</div>
+		<center>
+			<h3>I also like to;</h3>
+    		</p>
+
+		<div class="wrap-list">
+			<ol>
+				<li class="list">Play Legos </li>
+				<li class="list">Play games </li>
+				<li class="list">and Have Fun!! </li>
+			</ol>	
+		</div>
+		</center>
+		
+		<center>
+		<div class="Trivia">
+		<h2> Star Wars Trivia:</h2>
+		<p class="text1">Who did Han Solo kill in the Mos Eisley cantina in Episode IV?</p>
+			<form>
+				<div id="response">
+
+				</div>
+				<input type="radio" name="trivia" Value="Yes"> Greedo <br>
+			    <input type="radio" name="trivia" Value="No"> Dengar <br>
+   			    <input type="radio" name="trivia" Value="No"> Boba Fett <br>
+    			<input type="radio" name="trivia" Value="No"> Cad Bane <br>
+    			<br>
+    			<input type="button" value="Submit Answer" id="button" onclick="answer()">
+			</form>
+
+		</div>
+		</center>
+		<hr>
+		<center>
+			<video width="720" height="400" controls autoplay>
+				<source src="http://www.w3schools.com/HTML/mov_bbb.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video> 
+		</center>
+
+		<hr>
+		
+    	<center>
+    		<footer class="blueboy">
+    		Website created by: <i><u>Tommy Korff</u></i> - <a href="http://www.gamestop.com">My Favorite Website! </a>
+    	</footer>
+    	</center>
+	</body> 
+</html>
